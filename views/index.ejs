@@ -20,9 +20,8 @@
 
 
   <form action="/messages" method="POST">
-    <input type="date" placeholder="date" name="date">
-    <input type="text" placeholder="name" name="name">
-    
+    <input type="date" placeholder="date" name="date" required>
+    <input type="text" placeholder="name" name="name" required>
     <button type="submit">Submit</button>   
   </form>
     
@@ -42,7 +41,7 @@
 </section>
 
 <section class = "right">
-  <h2>Wishes</h2>
+  <h2>Wishes ❤️</h2>
   <% for(var j=0; j < messages.length; j++) {%>
   <p>We wish you a Happy Birthday, <span><%= messages[j].name %><span>~</p>
     <% } %>

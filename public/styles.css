@@ -5,15 +5,18 @@
 html{
   background: url('img/bday.jpg');
   background-size: cover;
+  color:rgb(49, 30, 30);
+  text-shadow: 1px 1px 1px white;
 }
 
 body{
   border: 10px solid rgb(216, 105, 124);
   border-radius: 30px;
   width: 70%;
-  background: rgb(255, 222, 226);
+  background: linear-gradient(rgb(255, 222, 226), rgb(253, 200, 206));
+  box-shadow: 2px 2px 1px 8px black;
   padding: 20px;
- margin: 20px auto;
+ margin: 50px auto;
 }
 
 div{
@@ -52,7 +55,7 @@ h1{
 button{
   background: rgba(255, 255, 255, 0.527);
   border-radius: 10px;
-  padding:3px;
+  padding:5px;
 }
 
 input{
