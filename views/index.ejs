@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>2023A Birthday Wishes</title>
+  <link rel="stylesheet" href="font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body> 
+  <button id ="clear-all">Goodbye Wishes</button>  
+  <h1>Resilient Coders Cohort 2023A Birthdays</h1>   
+ 
+  <div>
+  <section class ="left">
+  <h2>Write down your birthday!</h2>
+
+
+  <form action="/messages" method="POST">
+    <input type="date" placeholder="date" name="date">
+    <input type="text" placeholder="name" name="name">
+    
+    <button type="submit">Submit</button>   
+  </form>
+    
+  <ul class="messages">
+  <% for(var i=0; i < messages.length; i++) {%>
+    <li class="message">
+      <span><%= messages[i].date %></span>
+      <span><%= messages[i].name %></span>
+      <span><%= messages[i].hbd %></span> 
+      <span><span class = "hbd">Cake?</span></span>
+      <!-- <span><%= messages[i].thumbDown %></span> //shows the number in DOM -->
+      <span><i class="fa fa-trash" aria-hidden="true"></i></span>
+    </li>
+  <% } %>
+  </ul>
+
+</section>
+
+<section class = "right">
+  <h2>Wishes</h2>
+  <% for(var j=0; j < messages.length; j++) {%>
+  <p>We wish you a Happy Birthday, <span><%= messages[j].name %><span>~</p>
+    <% } %>
+  </section>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
